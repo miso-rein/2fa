@@ -7,6 +7,22 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Imagick Manual Installation
+
+- Copy php_imagick.dll → to your XAMPP PHP extension folder:
+C:\xampp\php\ext\
+
+- Copy the ImageMagick DLLs (those CORE_RL_*.dll, IM_MOD_RL_*.dll) → to your main PHP folder (so PHP can find them):
+C:\xampp\php\
+
+- Edit your php.ini (found at C:\xampp\php\php.ini) and add this line at the end of the extensions section:
+extension=imagick
+
+- Restart Apache
+
+- Run in terminal:
+php -m | find "imagick"
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
